@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Wake up, brah</string>
+    <string name="app_name">MyAlarmclock</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="notification_channel_desc">Channel</string>
+    <string name="notification_channel_name">Channel1</string>
 </resources>

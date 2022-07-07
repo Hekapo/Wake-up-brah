@@ -3,6 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="ru.itis.wakeupbrah">
 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,10 +17,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.WakeUpBrah"
+        android:theme="@style/Theme.MyAlarmclock"
         tools:targetApi="31">
-        <activity
-            android:name=".MainActivity"
+        <activity android:name=".myalarmclock.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +27,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name="com.example.myalarmclock.AlarmActivity"/>
+        <receiver
+            android:name="com.example.myalarmclock.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.example.myalarmclock.NotificationReceiver"/>
     </application>
 
 </manifest>
