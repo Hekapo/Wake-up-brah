@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#9638E6"
-    tools:context="com.example.myalarmclock.MainFragment">
+    tools:context=".myalarmclock.MainFragment">
 
     <TextView
         android:id="@+id/textTODO2"
         android:layout_width="100dp"
         android:layout_height="25dp"
         android:text="TODO"
-        android:textColor="@color/white"
+        android:clickable="true"
+        android:textColor="#BCBCBC"
         android:textSize="20sp"
         android:typeface="monospace"
         app:layout_constraintBottom_toTopOf="@+id/alarm_button"
@@ -27,7 +28,8 @@
         android:layout_width="100dp"
         android:layout_height="25dp"
         android:text="Мелодия"
-        android:textColor="@color/white"
+        android:clickable="true"
+        android:textColor="#BCBCBC"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +41,7 @@
     <FrameLayout
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:background="@drawable/time"
+        android:background="@drawable/button_states"
         app:layout_constraintBottom_toTopOf="@+id/alarm_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

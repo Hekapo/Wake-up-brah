@@ -1,50 +1,42 @@
 package com.example.myalarmclock
 
+import android.annotation.SuppressLint
 import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
-import ru.itis.wakeupbrah.myalarmclock.MainActivity
+import android.os.Build
+import android.view.View
+import com.google.android.material.snackbar.Snackbar
+import ru.itis.wakeupbrah.myalarmclock.AlarmReceiver
+import ru.itis.wakeupbrah.myalarmclock.MyService
 import java.util.*
 
 
-class CustomAlarm {
+class CustomAlarm (private var context: Context){
 
-    fun setAlarm(context: Context, time: Long) {
-        val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-        val info = AlarmManager.AlarmClockInfo(time, getAlarmInfoPendingIntent(context))
-
-        alarmManager.setAlarmClock(info, getAlarmActionPendingIntent(context))
-
-    }
-
-    fun cancelAlarm(context: Context) {
-        val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-        alarmManager.cancel(getAlarmActionPendingIntent(context))
-    }
+    @SuppressLint("UnspecifiedImmutableFlag")
+    fun setAlarm(
+        view: View,
+        calendar: Calendar?,
+        alarmManager: AlarmManager?,
+    ): PendingIntent? {
+        Snackbar.make(view, "Ваш будильник зазвенит в указанное время", 2000).show()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 
 
-
-    private fun getAlarmInfoPendingIntent(context: Context): PendingIntent? {
-        val alarmInfoIntent = Intent(context, MainActivity::class.java)
-        alarmInfoIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
-        return PendingIntent.getActivity(
-            context,
-            0,
-            alarmInfoIntent,
-            PendingIntent.FLAG_IMMUTABLE
-        )
-    }
-
-
-    private fun getAlarmActionPendingIntent(context: Context): PendingIntent? {
-        val intent = Intent(context, AlarmActivity::class.java)
-        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
-          return PendingIntent.getActivity(
-              context,
-              1,
-              intent,
-              PendingIntent.FLAG_IMMUTABLE)
+            calendar?.timeInMillis?.let {
+                val i = Intent(context, AlarmReceiver::class.java).apply {
+                    action = "com.tester.alarmManager"
+                }
+                val pendingIntent =
+                    PendingIntent.getBroadcast(context, 0, i, PendingIntent.FLAG_UPDATE_CURRENT)
+                alarmManager?.setExact(AlarmManager.RTC_WAKEUP, it, pendingIntent)
+                context.startForegroundService(Intent(context, MyService::class.java))
+                return pendingIntent
+            }
+        }
+        return null
     }
 
 
