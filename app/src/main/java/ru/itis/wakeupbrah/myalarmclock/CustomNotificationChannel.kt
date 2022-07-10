@@ -5,7 +5,9 @@ import android.app.NotificationManager
 import android.content.Context
 import android.media.AudioAttributes
 import android.net.Uri
+import android.os.Build
 import androidx.annotation.RawRes
+import androidx.annotation.RequiresApi
 import ru.itis.wakeupbrah.R
 import ru.itis.wakeupbrah.utils.Constants
 
@@ -17,6 +19,7 @@ class CustomNotificationChannel {
             .setUsage(AudioAttributes.USAGE_NOTIFICATION)
             .build()
     }
+
 
     fun createChannel(context: Context?) {
         if (context != null) {

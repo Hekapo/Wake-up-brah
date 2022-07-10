@@ -1,12 +1,16 @@
 package ru.itis.wakeupbrah.features.set_alarm
 
-import android.app.AlarmManager
-import android.app.PendingIntent
+import android.media.RingtoneManager
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.view.View
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import ru.itis.wakeupbrah.myalarmclock.CustomAlarm
 import com.google.android.material.timepicker.MaterialTimePicker
 import com.google.android.material.timepicker.TimeFormat
 import ru.itis.wakeupbrah.R
@@ -20,20 +24,28 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
     private val timeRepository = TimeRepository
-    private var alarmManager: AlarmManager? = null
-    private var pendingIntent: PendingIntent? = null
-    private var calendar: Calendar? = null
-    private var alarmChannel: AlarmChannel? = null
-    private var alarmChannelForService: AlarmChannelForService? = null
+//    private var alarmManager: AlarmManager? = null
+//    private var pendingIntent: PendingIntent? = null
+//    private var calendar: Calendar? = null
+//    private var alarmChannel: AlarmChannel? = null
+//    private var alarmChannelForService: AlarmChannelForService? = null
     private var channel: CustomNotificationChannel? = null
     private val customAlarm = CustomAlarm()
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         _binding = FragmentMainBinding.bind(view)
 
         channel = CustomNotificationChannel()
         channel?.createChannel(context)
+
+        binding.playRingtone.setOnClickListener {
+            PreferenceManager.getDefaultSharedPreferences(requireContext())
+                .getString("ringtone", null)
+                ?.let { RingtoneManager.getRingtone(requireContext(), Uri.parse(it)) }?.play()
+        }
 
 //        alarmChannel = AlarmChannel(requireContext()).also {
 //            it.createNotificationChannel()

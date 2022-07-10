@@ -1,5 +1,6 @@
 package ru.itis.wakeupbrah.myalarmclock
 
+
 import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
@@ -54,14 +55,14 @@ class CustomAlarm {
             context,
             0,
             alarmInfoIntent,
-            PendingIntent.FLAG_UPDATE_CURRENT
+            PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
         )
     }
 
     private fun getAlarmActionPendingIntent(context: Context): PendingIntent? {
         val intent = Intent(context, NotificationReceiver::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
-        return PendingIntent.getBroadcast(context, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+        return PendingIntent.getBroadcast(context, 1, intent, PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT)
     }
 
 
