@@ -22,18 +22,22 @@
             android:exported="true">
         </service>
 
-        <receiver android:name="ru.itis.wakeupbrah.myalarmclock.AlarmReceiver"
+        <receiver
+            android:name=".myalarmclock.AlarmReceiver"
+            android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.tester.alarmManager" />
-                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
+        <receiver android:name=".myalarmclock.NotificationReceiver" />
+
         <activity
-            android:name="com.example.myalarmclock.AlarmActivity"
+            android:name="ru.itis.wakeupbrah.features.open_alarm.AlarmActivity"
             android:exported="true" />
-        <activity android:name="ru.itis.wakeupbrah.myalarmclock.MainActivity"
+
+        <activity android:name="ru.itis.wakeupbrah.features.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,7 +46,5 @@
             </intent-filter>
         </activity>
     </application>
-
-
 
 </manifest>

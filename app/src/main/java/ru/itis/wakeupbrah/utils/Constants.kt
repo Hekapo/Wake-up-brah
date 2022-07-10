@@ -1,4 +1,4 @@
-package com.example.myalarmclock
+package ru.itis.wakeupbrah.utils
 
 object Constants {
     const val TIME = "TIME"

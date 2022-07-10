@@ -1,4 +1,4 @@
-package com.example.myalarmclock
+package ru.itis.wakeupbrah.features.open_alarm
 
 import android.media.Ringtone
 import android.media.RingtoneManager
@@ -8,7 +8,6 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
 import ru.itis.wakeupbrah.R
 import java.text.SimpleDateFormat
 import java.util.*

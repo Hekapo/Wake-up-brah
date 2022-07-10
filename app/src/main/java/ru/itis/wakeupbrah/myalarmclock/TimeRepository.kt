@@ -1,20 +1,25 @@
-package com.example.myalarmclock
+package ru.itis.wakeupbrah.myalarmclock
 
 import android.content.Context
-import com.example.myalarmclock.Constants
+import ru.itis.wakeupbrah.utils.Constants
+import java.text.SimpleDateFormat
 import java.util.*
 
-class TimeRepository {
+object TimeRepository {
 
-    fun saveTime (calendar: Calendar, context: Context) {
+    fun saveTime(calendar: Calendar, context: Context) {
         val sharedPreferences = context.getSharedPreferences(Constants.TIME, Context.MODE_PRIVATE)
         sharedPreferences.edit().putLong(Constants.TIME_IN_MILLISECONDS, calendar.timeInMillis)
-            .apply ()
+            .apply()
 
     }
 
-    fun getTime (context: Context): Long {
+    fun getTime(context: Context): Long {
         val sharedPreferences = context.getSharedPreferences(Constants.TIME, Context.MODE_PRIVATE)
-        return sharedPreferences.getLong(Constants.TIME_IN_MILLISECONDS, 1)
+        return sharedPreferences.getLong(Constants.TIME_IN_MILLISECONDS, -1L)
     }
+
+//    fun getCurrentTime(): Long {
+
+//    }
 }

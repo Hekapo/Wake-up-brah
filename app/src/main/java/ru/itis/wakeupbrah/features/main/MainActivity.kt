@@ -1,4 +1,4 @@
-package ru.itis.wakeupbrah.myalarmclock
+package ru.itis.wakeupbrah.features.main
 
 
 import android.os.Bundle

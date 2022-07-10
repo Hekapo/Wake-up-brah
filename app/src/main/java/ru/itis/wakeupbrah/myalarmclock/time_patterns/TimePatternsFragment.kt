@@ -20,6 +20,4 @@ class TimePatternsFragment: Fragment(R.layout.fragment_time_petterns) {
             }
         }
     }
-
-
 }
