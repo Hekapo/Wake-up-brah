@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="text_enter_answer">
+        <item name="android:textSize">
+            18sp
+        </item>
+        <item name="android:textColor">
+            #CFCFCF
+        </item>
+    </style>
+
+    <style name="text_question">
+        <item name="android:textSize">
+            26sp
+        </item>
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+    </style>
+
+    <style name="time_style">
+        <item name="android:textSize">
+            40sp
+        </item>
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+    </style>
+
+    <style name="counter_style">
+        <item name="android:textSize">
+            23sp
+        </item>
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+    </style>
+
+    <style name="enter_button">
+        <item name="android:textSize">
+            18sp
+        </item>
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+    </style>
+
+</resources>

@@ -1,11 +1,10 @@
-package ru.itis.wakeupbrah.myalarmclock.time_patterns
+package ru.itis.wakeupbrah.time_patterns
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import ru.itis.wakeupbrah.R
-import ru.itis.wakeupbrah.databinding.FragmentMainBinding
 import ru.itis.wakeupbrah.databinding.FragmentTimePetternsBinding
 
 class TimePatternsFragment: Fragment(R.layout.fragment_time_petterns) {
@@ -19,5 +18,16 @@ class TimePatternsFragment: Fragment(R.layout.fragment_time_petterns) {
                 findNavController().navigate(R.id.action_timePatternsFragmment_to_mainFragment)
             }
         }
+        with(binding){
+            newReminder.setOnClickListener {
+                findNavController().navigate(R.id.action_timePatternsFragmment2_to_reminderFragment)
+            }
+        }
+        with(binding){
+            newSmart.setOnClickListener {
+                findNavController().navigate(R.id.action_timePatternsFragmment2_to_smartFragment)
+            }
+        }
+
     }
 }

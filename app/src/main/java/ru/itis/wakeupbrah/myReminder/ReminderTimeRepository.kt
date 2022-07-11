@@ -1,11 +1,11 @@
-package ru.itis.wakeupbrah.myalarmclock
+package ru.itis.wakeupbrah.myReminder
 
 import android.content.Context
 import ru.itis.wakeupbrah.utils.Constants
 import java.text.SimpleDateFormat
 import java.util.*
 
-object TimeRepository {
+object ReminderTimeRepository {
 
     fun saveTime(calendar: Calendar, context: Context) {
         val sharedPreferences = context.getSharedPreferences(Constants.TIME, Context.MODE_PRIVATE)

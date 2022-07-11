@@ -1,40 +1,40 @@
-package ru.itis.wakeupbrah.features.set_alarm
+package ru.itis.wakeupbrah.myReminder
 
-import android.media.RingtoneManager
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import androidx.preference.PreferenceManager
 import android.view.View
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-//import ru.itis.wakeupbrah.myalarmclock.CustomReminder
+import ru.itis.wakeupbrah.smartAlarm.CustomSmart
 import com.google.android.material.timepicker.MaterialTimePicker
 import com.google.android.material.timepicker.TimeFormat
 import ru.itis.wakeupbrah.R
-import ru.itis.wakeupbrah.databinding.FragmentMainBinding
+import ru.itis.wakeupbrah.databinding.FragmentReminderBinding
+import ru.itis.wakeupbrah.databinding.FragmentSmartBinding
 import ru.itis.wakeupbrah.myalarmclock.*
 import java.text.SimpleDateFormat
 import java.util.*
 
-class MainFragment : Fragment(R.layout.fragment_main) {
+class SmartFragment : Fragment(R.layout.fragment_smart) {
 
-    private var _binding: FragmentMainBinding? = null
+    private var _binding: FragmentSmartBinding? = null
     private val binding get() = _binding!!
-    private val timeRepository = TimeRepository
-    private var channel: CustomNotificationChannel? = null
-    private val customAlarm = CustomAlarm()
+    private val smartTimeRepository = SmartTimeRepository
+    private var channel: SmartCustomNotificationChannel? = null
+    private val customSmart = CustomSmart()
+
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        _binding = FragmentMainBinding.bind(view)
+        _binding = FragmentSmartBinding.bind(view)
 
-        channel = CustomNotificationChannel()
+        channel = SmartCustomNotificationChannel()
         channel?.createChannel(context)
+
 
         begin()
     }
@@ -46,7 +46,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
                 .setTimeFormat(TimeFormat.CLOCK_24H)
                 .setHour(12)
                 .setMinute(0)
-                .setTitleText("Выберите время для будильника")
+                .setTitleText("Выберите время для напоминания")
                 .build()
 
             materialTimePicker.addOnPositiveButtonClickListener {
@@ -61,7 +61,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
                     calendar.add(Calendar.DAY_OF_MONTH, 1)
                 }
 
-                timeRepository.saveTime(calendar, requireContext())
+                smartTimeRepository.saveTime(calendar, requireContext())
                 binding.showTime.text = sdf.format(calendar.time).toString()
             }
             materialTimePicker.show(childFragmentManager, "tag_picker")
@@ -73,30 +73,29 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
                 Toast.makeText(
                     requireContext(),
-                    "Будильник установлен на " + sdf.format(timeRepository.getTime(requireContext())),
+                    "Будильник прозвенит в " + sdf.format(smartTimeRepository.getTime(requireContext())),
                     Toast.LENGTH_SHORT
                 ).show()
-                customAlarm.setAlarm(requireContext(), timeRepository.getTime(requireContext()))
+                customSmart.setAlarm(requireContext(), smartTimeRepository.getTime(requireContext()))
 
-                findNavController().navigate(R.id.action_mainFragment_to_timePatternsFragmment)
+                findNavController().navigate(R.id.action_smartFragment_to_timePatternsFragmment2)
             }
         }
         with(binding) {
             back.setOnClickListener {
-                findNavController().navigate(R.id.action_mainFragment_to_timePatternsFragmment)
+                findNavController().navigate(R.id.action_smartFragment_to_timePatternsFragmment2)
             }
+
         }
         with(binding) {
             alarmRemove.setOnClickListener {
-                customAlarm.cancelAlarm(requireContext())
+                customSmart.cancelAlarm(requireContext())
             }
         }
+
     }
-
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
 }

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple"
+    >
+
+    <TextView
+        android:id="@+id/tv_correct_answers"
+        android:layout_width="108dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="138dp"
+        android:layout_marginRight="0dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center_horizontal|top"
+        android:text="@string/counter"
+        android:textAppearance="@style/counter_style" />
+
+    <View
+        android:layout_width="302dp"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginRight="37dp"
+        android:background="@drawable/question_text" />
+
+    <TextView
+        android:id="@+id/tv_question"
+        android:layout_width="214dp"
+        android:layout_height="145dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="81dp"
+        android:layout_marginTop="226dp"
+        android:layout_marginRight="81dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="@string/question_text"
+        android:autoSizeTextType="uniform"
+        android:textAppearance="@style/text_question" />
+
+    <android.widget.Button
+        android:id="@+id/btn_one"
+        android:layout_width="335dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="440dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/button_answer"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/enter_button"
+        android:textAppearance="@style/enter_button" />
+
+    <android.widget.Button
+        android:id="@+id/btn_two"
+        android:layout_width="335dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="510dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/button_answer"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/enter_button"
+        android:textAppearance="@style/enter_button" />
+
+    <android.widget.Button
+        android:id="@+id/btn_three"
+        android:layout_width="335dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="580dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/button_answer"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/enter_button"
+        android:textAppearance="@style/enter_button"/>
+
+    <android.widget.Button
+        android:id="@+id/btn_four"
+        android:layout_width="335dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="650dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/button_answer"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/enter_button"
+        android:textAppearance="@style/enter_button" />
+
+
+</RelativeLayout>

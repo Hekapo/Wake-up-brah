@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/smart_nav"
+    app:startDestination="@id/mainFragment2">
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="ru.itis.wakeupbrah.smartAlarm.ChooseAnswerFragment"
+        android:label="QuestionFragment"
+        tools:layout="@layout/fragment_choose_answer"/>
+    <fragment
+        android:id="@+id/mainFragment2"
+        android:name="ru.itis.wakeupbrah.MainFragment2"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main2" >
+        <action
+            android:id="@+id/action_mainFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_enterAnswerFragment"
+            app:destination="@id/enterAnswerFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_mathematicsFragment"
+            app:destination="@id/mathematicsFragment" />
+        <action
+            android:id="@+id/action_mainFragment2_self"
+            app:destination="@id/mainFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/enterAnswerFragment"
+        android:name="ru.itis.wakeupbrah.EnterAnswerFragment"
+        android:label="EnterAnswerFragment"
+        tools:layout="@layout/fragment_enter_answer" />
+    <fragment
+        android:id="@+id/mathematicsFragment"
+        android:name="ru.itis.wakeupbrah.MathematicsFragment"
+        android:label="MathematicsFragment"
+        tools:layout="@layout/fragment_mathematics"/>
+
+</navigation>

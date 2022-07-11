@@ -8,8 +8,7 @@ import android.content.Intent
 import ru.itis.wakeupbrah.features.main.MainActivity
 
 
-class CustomAlarm {
-
+class CustomReminder {
 
     fun setAlarm(context: Context, time: Long) {
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
@@ -29,16 +28,16 @@ class CustomAlarm {
         alarmInfoIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
         return PendingIntent.getActivity(
             context,
-            0,
+            2,
             alarmInfoIntent,
             PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
         )
     }
 
     private fun getAlarmActionPendingIntent(context: Context): PendingIntent? {
-        val intent = Intent(context, NotificationReceiver::class.java)
+        val intent = Intent(context, ReminderNotificationReceiver::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
-        return PendingIntent.getBroadcast(context, 1, intent, PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT)
+        return PendingIntent.getBroadcast(context, 3, intent, PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT)
     }
 
 

@@ -8,6 +8,19 @@
     >
 
     <ImageButton
+        android:id="@+id/new_smart"
+        android:layout_width="78dp"
+        android:layout_height="68dp"
+        android:backgroundTint="#9638E6"
+        android:src="@drawable/alarm_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.606" />
+
+    <ImageButton
         android:id="@+id/new_alarm"
         android:layout_width="78dp"
         android:layout_height="68dp"
@@ -18,6 +31,20 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.952" />
+        app:layout_constraintVertical_bias="0.975" />
+
+    <ImageButton
+        android:id="@+id/new_reminder"
+        android:layout_width="78dp"
+        android:layout_height="68dp"
+        android:backgroundTint="#9638E6"
+        android:src="@drawable/alarm_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.212" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

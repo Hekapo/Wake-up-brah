@@ -4,14 +4,15 @@ import android.annotation.SuppressLint
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import ru.itis.wakeupbrah.myReminder.ReminderTimeRepository
 
-class AlarmReceiver : BroadcastReceiver() {
+class ReminderReceiver : BroadcastReceiver() {
 
     @SuppressLint("UnspecifiedImmutableFlag")
     override fun onReceive(context: Context, intent: Intent) {
-        val timeRepository = TimeRepository
-        val alarm = CustomAlarm()
-        alarm.setAlarm(context, timeRepository.getTime(context))
+        val reminderTimeRepository = ReminderTimeRepository
+        val alarm = CustomReminder()
+        alarm.setAlarm(context, reminderTimeRepository.getTime(context))
 
     }
 }

@@ -4,6 +4,8 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
 import android.media.AudioAttributes
+import android.media.Ringtone
+import android.media.RingtoneManager
 import android.net.Uri
 import android.os.Build
 import androidx.annotation.RawRes
@@ -12,7 +14,7 @@ import ru.itis.wakeupbrah.R
 import ru.itis.wakeupbrah.utils.Constants
 
 
-class CustomNotificationChannel {
+class SmartCustomNotificationChannel {
     private val audio by lazy {
         AudioAttributes.Builder()
             .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
@@ -20,18 +22,16 @@ class CustomNotificationChannel {
             .build()
     }
 
-
     @RequiresApi(Build.VERSION_CODES.O)
     fun createChannel(context: Context?) {
         if (context != null) {
             val importance = NotificationManager.IMPORTANCE_DEFAULT
             val channel = NotificationChannel(
                 Constants.CHANNEL_ID,
-                context.getString(R.string.notification_channel_name),
+                context.getString(R.string.notification_channel_name2),
                 importance
             ).apply {
-                description = context.getString(R.string.notification_channel_desc)
-
+                description = context.getString(R.string.notification_channel_desc2)
                 val sound: Uri = context.getSoundUri(R.raw.mate1000)
                 setSound(sound, audio)
             }
@@ -40,8 +40,8 @@ class CustomNotificationChannel {
             notificationManager.createNotificationChannel(channel)
         }
     }
-
     private fun Context.getSoundUri(
         @RawRes id: Int
     ) = Uri.parse("android.resource://${packageName}/$id")
+
 }

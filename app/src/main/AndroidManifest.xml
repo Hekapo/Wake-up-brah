@@ -16,11 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyAlarmclock">
-        <service
-            android:name="ru.itis.wakeupbrah.myalarmclock.MyService"
-            android:enabled="true"
-            android:exported="true">
-        </service>
+
 
         <receiver
             android:name=".myalarmclock.AlarmReceiver"
@@ -30,9 +26,32 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+        <receiver
+            android:name=".myalarmclock.SmartReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".myalarmclock.ReminderReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
 
         <receiver android:name=".myalarmclock.NotificationReceiver" />
-
+        <receiver android:name=".myalarmclock.ReminderNotificationReceiver" />
+        <receiver android:name=".myalarmclock.SmartNotificationReceiver" />
+        <activity
+            android:name="ru.itis.wakeupbrah.myReminder.ReminderActivity"
+            android:exported="true" />
+        <activity
+            android:name="ru.itis.wakeupbrah.smartAlarm.SmartActivity"
+            android:exported="true" />
         <activity
             android:name="ru.itis.wakeupbrah.features.open_alarm.AlarmActivity"
             android:exported="true" />
