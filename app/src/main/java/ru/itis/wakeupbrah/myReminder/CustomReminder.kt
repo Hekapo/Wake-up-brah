@@ -1,0 +1,44 @@
+package ru.itis.wakeupbrah.myalarmclock
+
+
+import android.app.AlarmManager
+import android.app.PendingIntent
+import android.content.Context
+import android.content.Intent
+import ru.itis.wakeupbrah.features.main.MainActivity
+
+
+class CustomReminder {
+
+    fun setAlarm(context: Context, time: Long) {
+        val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        val info = AlarmManager.AlarmClockInfo(time, getAlarmInfoPendingIntent(context))
+
+        alarmManager.setAlarmClock(info, getAlarmActionPendingIntent(context))
+
+    }
+
+    fun cancelAlarm(context: Context) {
+        val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        alarmManager.cancel(getAlarmActionPendingIntent(context))
+    }
+
+    private fun getAlarmInfoPendingIntent(context: Context): PendingIntent? {
+        val alarmInfoIntent = Intent(context, MainActivity::class.java)
+        alarmInfoIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+        return PendingIntent.getActivity(
+            context,
+            2,
+            alarmInfoIntent,
+            PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
+        )
+    }
+
+    private fun getAlarmActionPendingIntent(context: Context): PendingIntent? {
+        val intent = Intent(context, ReminderNotificationReceiver::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+        return PendingIntent.getBroadcast(context, 3, intent, PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT)
+    }
+
+
+}

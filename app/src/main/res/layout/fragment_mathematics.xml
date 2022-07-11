@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:ignore="MissingConstraints">
+
+
+        <View
+            android:layout_width="302dp"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="225dp"
+            android:layout_marginRight="39dp"
+            android:background="@drawable/question_text" />
+
+        <TextView
+            android:id="@+id/tv_mathematics_question"
+            android:layout_width="214dp"
+            android:layout_height="145dp"
+
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="81dp"
+            android:layout_marginTop="249dp"
+            android:layout_marginRight="81dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="@string/question_text"
+            android:textAppearance="@style/text_question" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/rectangle_1"
+            android:layout_width="335dp"
+            android:layout_height="85dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="500dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/enter_answer">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_answer_mathematics"
+                inputType="textCapCharacters"
+                android:layout_width="300dp"
+                android:layout_height="63dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="23dp"
+                android:inputType="numberDecimal"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/montserrat_bold"
+                android:hint="@string/enter_answer"
+                android:textAppearance="@style/text_enter_answer"
+                android:textColor="@color/purple_very_dark"
+                android:textColorHint="@color/purple_dark" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <android.widget.Button
+            android:id="@+id/btn_enter_mathematics"
+            android:layout_width="335dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="620dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_answer"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/enter_button"
+            android:textAppearance="@style/enter_button" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav.xml"
+    app:startDestination="@id/timePatternsFragmment2">
+
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="ru.itis.wakeupbrah.features.set_alarm.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_timePatternsFragmment"
+            app:destination="@id/timePatternsFragmment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/timePatternsFragmment2"
+        android:name="ru.itis.wakeupbrah.time_patterns.TimePatternsFragment"
+        android:label="TimePatternsFragmment" >
+        <action
+            android:id="@+id/action_timePatternsFragmment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_timePatternsFragmment2_to_reminderFragment"
+            app:destination="@id/reminderFragment" />
+        <action
+            android:id="@+id/action_timePatternsFragmment2_to_smartFragment"
+            app:destination="@id/smartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reminderFragment"
+        android:name="ru.itis.wakeupbrah.myReminder.ReminderFragment"
+        android:label="ReminderFragment" >
+        <action
+            android:id="@+id/action_reminderFragment_to_timePatternsFragmment2"
+            app:destination="@id/timePatternsFragmment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/smartFragment"
+        android:name="ru.itis.wakeupbrah.myReminder.SmartFragment"
+        android:label="SmartFragment" >
+        <action
+            android:id="@+id/action_smartFragment_to_timePatternsFragmment2"
+            app:destination="@id/timePatternsFragmment2" />
+    </fragment>
+</navigation>

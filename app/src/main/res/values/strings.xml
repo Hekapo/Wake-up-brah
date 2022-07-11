@@ -1,3 +1,175 @@
 <resources>
-    <string name="app_name">WakeUpBrah</string>
+    <string name="app_name">MyAlarmclock</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="notification_channel_desc">Channel</string>
+    <string name="notification_channel_name">Channel1</string>
+    <string name="wake_up">ara_ara</string>
+    <string name="notification_channel_desc1">Ch2</string>
+    <string name="notification_channel_name1">Ch1</string>
+    <color name="purple">#9638E6</color>
+    <color name="purpleLight">#B462FF</color>
+    <color name="purpleDark">#862DD7</color>
+    <string name="enter_answer">Введите ответ</string>
+    <string name="question_text">Вопрос</string>
+    <string name="time">14:43</string>
+    <string name="counter">Правильные ответы: 0/3</string>
+    <string name="enter_button">Ответ</string>
+    <string name="correct_answer">Правильно!</string>
+    <string name="wrong_answer">Неправильно(</string>
+
+    <!-- Questions -->
+    <string name="question1">Какой герой мультфильма живет в ананасе под водой?</string>
+    <string name="question2">Кто является национальным животным Шотландии?</string>
+    <string name="question3">Какая птица является символом мудрости?</string>
+    <string name="question4">Какое дерево называют плакучим?</string>
+    <string name="question5">Сколько лапок у паука?</string>
+    <string name="question6">Как называется помесь льва и тигра?</string>
+    <string name="question7">В честь кого из крупных кошек получила название марка элитных автомобилей?</string>
+    <string name="question8">Кто придумал и впервые показал на сцене «лунную походку»?</string>
+    <string name="question9">В какое растение, по греческой легенде, превратился юноша, влюбленный в собственное отражение?</string>
+    <string name="question10">Как звали огромного дикого медведя – друга Маугли?</string>
+    <string name="question11">Какая самая маленькая планета в нашей Солнечной системе?</string>
+    <string name="question12">Олимпийские игры проводятся каждые сколько лет?</string>
+    <string name="question13">Какая страна является самой маленькой в мире?</string>
+    <string name="question14">Что это за животное - косатка?</string>
+    <string name="question15">В каком животном можно найти жемчуг?</string>
+
+    <!-- Choices -->
+    <string name="question1_choice1">Камбала</string>
+    <string name="question1_choice2">Немо</string>
+    <string name="question1_choice3">Рик и Морти</string>
+    <string name="question1_choice4">Губка Боб</string>
+
+    <string name="question2_choice1">Лошадь</string>
+    <string name="question2_choice2">Единорог</string>
+    <string name="question2_choice3">Волк</string>
+    <string name="question2_choice4">Корова</string>
+
+    <string name="question3_choice1">Орёл</string>
+    <string name="question3_choice2">Соловей</string>
+    <string name="question3_choice3">Сова</string>
+    <string name="question3_choice4">Голубь</string>
+
+    <string name="question4_choice1">Дуб</string>
+    <string name="question4_choice2">Лиственницу</string>
+    <string name="question4_choice3">Берёзу</string>
+    <string name="question4_choice4">Иву</string>
+
+    <string name="question5_choice1">6</string>
+    <string name="question5_choice2">8</string>
+    <string name="question5_choice3">12</string>
+    <string name="question5_choice4">4</string>
+
+    <string name="question6_choice1">Ливр</string>
+    <string name="question6_choice2">Лигр</string>
+    <string name="question6_choice3">Тибр</string>
+    <string name="question6_choice4">Тигролев</string>
+
+    <string name="question7_choice1">Ягуар</string>
+    <string name="question7_choice2">Пума</string>
+    <string name="question7_choice3">Леопард</string>
+    <string name="question7_choice4">Тигр</string>
+
+    <string name="question8_choice1">Чарли Чаплин</string>
+    <string name="question8_choice2">Фред Астер</string>
+    <string name="question8_choice3">Джастин Бибер</string>
+    <string name="question8_choice4">Майкл Джексон</string>
+
+    <string name="question9_choice1">Кипарис</string>
+    <string name="question9_choice2">Тюльпан</string>
+    <string name="question9_choice3">Нарцисс</string>
+    <string name="question9_choice4">Роза</string>
+
+    <string name="question10_choice1">Симба</string>
+    <string name="question10_choice2">Каа</string>
+    <string name="question10_choice3">Балу</string>
+    <string name="question10_choice4">По</string>
+
+    <string name="question11_choice1">Меркурий</string>
+    <string name="question11_choice2">Марс</string>
+    <string name="question11_choice3">Юпитер</string>
+    <string name="question11_choice4">Нептун</string>
+
+    <string name="question12_choice1">Шесть лет</string>
+    <string name="question12_choice2">Четыре года</string>
+    <string name="question12_choice3">Пять лет</string>
+    <string name="question12_choice4">Два года</string>
+
+    <string name="question13_choice1">Мальта</string>
+    <string name="question13_choice2">Мальдивы</string>
+    <string name="question13_choice3">Россия</string>
+    <string name="question13_choice4">Ватикан</string>
+
+    <string name="question14_choice1">Тюлень</string>
+    <string name="question14_choice2">Дельфин</string>
+    <string name="question14_choice3">Акула</string>
+    <string name="question14_choice4">Кит</string>
+
+    <string name="question15_choice1">Устрицы</string>
+    <string name="question15_choice2">Крабы</string>
+    <string name="question15_choice3">Раки</string>
+    <string name="question15_choice4">Мидии</string>
+
+    <!-- Riddles -->
+    <string name="riddle1">Ни в огне не горит, ни в воде не тонет.</string>
+    <string name="riddle2">Мягкие лапки, а в лапках царапки.</string>
+    <string name="riddle3">По волнам дворец плывёт, в трюме важный груз везёт.</string>
+    <string name="riddle4">В поле лестница лежит, дом по лестнице бежит.</string>
+    <string name="riddle5">Два конца, два кольца, посредине гвоздик.</string>
+    <string name="riddle6">Красна девица сидит в темнице, а коса на улице.</string>
+    <string name="riddle7">Раскаленная стрела дуб свалила у села.</string>
+    <string name="riddle8">Разноцветное коромысло над рекой повисло.</string>
+    <string name="riddle9">Зимой — звезда, Весной — вода.</string>
+    <string name="riddle10">Кругом вода, а с питьем беда.</string>
+    <string name="riddle11">Посадили зёрнышко - вырастили солнышко.</string>
+    <string name="riddle12">В доску спрячется бедняжка — чуть видна его фуражка.</string>
+    <string name="riddle13">Пушистая вата плывет куда-то. Чем вата ниже, тем дождик ближе.</string>
+    <string name="riddle14">По реке плывет бревно. Ох, и злющее оно!</string>
+    <string name="riddle15">Сам алый, сахарный, кафтан зеленый, бархатный.</string>
+
+    <!-- Riddles Answers -->
+    <string name="riddle1_answer">лёд</string>
+    <string name="riddle2_answer">кошка</string>
+    <string name="riddle3_answer">корабль</string>
+    <string name="riddle4_answer">поезд</string>
+    <string name="riddle5_answer">ножницы</string>
+    <string name="riddle6_answer">морковь</string>
+    <string name="riddle7_answer">молния</string>
+    <string name="riddle8_answer">радуга</string>
+    <string name="riddle9_answer">снежинка</string>
+    <string name="riddle10_answer">море</string>
+    <string name="riddle11_answer">подсолнух</string>
+    <string name="riddle12_answer">гвоздь</string>
+    <string name="riddle13_answer">облако</string>
+    <string name="riddle14_answer">крокодил</string>
+    <string name="riddle15_answer">арбуз</string>
+
+    <!-- Mathematics -->
+    <string name="mathematics1">2 + 2*2</string>
+    <string name="mathematics2">9*5 + 3 – 16 + 4</string>
+    <string name="mathematics3">7 + 3*6 + 55 – 19</string>
+    <string name="mathematics4">29 – 15 + 3*30 – 8</string>
+    <string name="mathematics5">91 – 7*6 + 14 – 2</string>
+    <string name="mathematics6">15 + 18 + 57 – 31 + 3</string>
+    <string name="mathematics7">83 – 12*2 + 14</string>
+    <string name="mathematics8">18*3 + 7 – 2</string>
+    <string name="mathematics9">16 + 16 + 16 – 8*2</string>
+    <string name="mathematics10">92 – 1 – 2 – 3 – 4</string>
+
+    <!-- Mathematics Answers -->
+    <string name="mathematics1_answer">6</string>
+    <string name="mathematics2_answer">36</string>
+    <string name="mathematics3_answer">61</string>
+    <string name="mathematics4_answer">96</string>
+    <string name="mathematics5_answer">61</string>
+    <string name="mathematics6_answer">62</string>
+    <string name="mathematics7_answer">73</string>
+    <string name="mathematics8_answer">69</string>
+    <string name="mathematics9_answer">32</string>
+    <string name="mathematics10_answer">82</string>
+    <string name="notification_channel_name2">Ch3</string>
+    <string name="notification_channel_desc2">Ch4</string>
+
+
 </resources>
