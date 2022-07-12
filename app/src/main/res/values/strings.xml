@@ -17,6 +17,17 @@
     <string name="enter_button">Ответ</string>
     <string name="correct_answer">Правильно!</string>
     <string name="wrong_answer">Неправильно(</string>
+    <string name="turnOff">Выключить</string>
+    <string name="wakeUp">!!!Проснись!!!</string>
+    <string name="_08_00">08:00</string>
+    <string name="NewAlarmClock">Новый будильник</string>
+    <string name="Create">Создать</string>
+    <string name="Remove">Удалить</string>
+    <string name="math">Математика</string>
+    <string name="Riddles">Загадки</string>
+    <string name="Quiz">Викторина</string>
+    <string name="reminder">Напоминание</string>
+    <string name="enterReminder">Введите напоминание</string>
 
     <!-- Questions -->
     <string name="question1">Какой герой мультфильма живет в ананасе под водой?</string>
@@ -170,6 +181,15 @@
     <string name="mathematics10_answer">82</string>
     <string name="notification_channel_name2">Ch3</string>
     <string name="notification_channel_desc2">Ch4</string>
+    <string name="SmartAlarmClock">Умный будильник</string>
+    <string name="wake_up_brah">wake up, brah!</string>
+    <string name="Reminder">Напоминание</string>
+    <string name="AlarmClock">Будильник</string>
+    <string name="todo">TODO</string>
+    <string name="time_reminder">Выберите время для напоминания</string>
+    <string name="time_alarm">\"Будильник прозвенит в \"</string>
+    <string name="wakeup">!!!Проснись!!!</string>
+    <string name="set_reminder">Выберите время для напоминания</string>
 
 
 </resources>

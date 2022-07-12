@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyAlarmclock</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="notification_channel_desc">Channel</string>
+    <string name="notification_channel_name">Channel1</string>
+    <string name="wake_up">ara_ara</string>
+    <string name="notification_channel_desc1">Ch2</string>
+    <string name="notification_channel_name1">Ch1</string>
+    <color name="purple">#9638E6</color>
+    <color name="purpleLight">#B462FF</color>
+    <color name="purpleDark">#862DD7</color>
+    <string name="enter_answer">Enter the answer</string>
+    <string name="question_text">Question</string>
+    <string name="time">14:43</string>
+    <string name="counter">Correct answers: 0/3</string>
+    <string name="enter_button">Answer</string>
+    <string name="correct_answer">Correctly!</string>
+    <string name="wrong_answer">Wrong(</string>
+    <string name="turnOff">Turn Off</string>
+    <string name="wakeUp">!!!Wake up!!!</string>
+    <string name="_08_00">08:00</string>
+    <string name="NewAlarmClock">New alarm clock</string>
+    <string name="Create">Create</string>
+    <string name="Remove">Remove</string>
+    <string name="math">Mathematics</string>
+    <string name="Riddles">Riddles</string>
+    <string name="Quiz">Quiz</string>
+    <string name="reminder">Reminder</string>
+    <string name="enterReminder">Enter a reminder</string>
+
+    <!-- Questions -->
+    <string name="question1">Which cartoon character lives in a pineapple underwater?</string>
+    <string name="question2">Who is the national animal of Scotland?</string>
+    <string name="question3">Which bird is the symbol of wisdom?</string>
+    <string name="question4">Which tree is called weeping?</string>
+    <string name="question5">How many legs does a spider have?</string>
+    <string name="question6">What is the name of a cross between a lion and a tiger?</string>
+    <string name="question7">In honor of which of the big cats was the brand of luxury cars named?</string>
+    <string name="question8">Who invented and first showed "moonwalk" on stage?</string>
+    <string name="question9">What kind of plant, according to Greek legend, turned a young man in love with his own reflection?</string>
+    <string name="question10">What was the name of the huge wild bear – Mowgli\'s friend?</string>
+    <string name="question11">What is the smallest planet in our Solar system?</string>
+    <string name="question12">The Olympic Games are held every how many years?</string>
+    <string name="question13">Which country is the smallest in the world?</string>
+    <string name="question14">What kind of animal is a killer whale?</string>
+    <string name="question15">In which animal can you find pearls?</string>
+
+    <!-- Choices -->
+    <string name="question1_choice1">Flounder</string>
+    <string name="question1_choice2">Nemo</string>
+    <string name="question1_choice3">Rick and Morty</string>
+    <string name="question1_choice4">Spongebob</string>
+
+    <string name="question2_choice1">Horse</string>
+    <string name="question2_choice2">Unicorn</string>
+    <string name="question2_choice3">Wolf</string>
+    <string name="question2_choice4">cow</string>
+
+    <string name="question3_choice1">Eagle</string>
+    <string name="question3_choice2">Nightingale</string>
+    <string name="question3_choice3">Owl</string>
+    <string name="question3_choice4">Pigeon</string>
+
+    <string name="question4_choice1">Oak</string>
+    <string name="question4_choice2">Larch</string>
+    <string name="question4_choice3">Birch</string>
+    <string name="question4_choice4">Willow</string>
+
+    <string name="question5_choice1">6</string>
+    <string name="question5_choice2">8</string>
+    <string name="question5_choice3">12</string>
+    <string name="question5_choice4">4</string>
+
+    <string name="question6_choice1">Livre</string>
+    <string name="question6_choice2">Ligr</string>
+    <string name="question6_choice3">Tiber</string>
+    <string name="question6_choice4">Tigrolev</string>
+
+    <string name="question7_choice1">Jaguar</string>
+    <string name="question7_choice2">Cougar</string>
+    <string name="question7_choice3">Leopard</string>
+    <string name="question7_choice4">Tigr</string>
+
+    <string name="question8_choice1">Charlie Chaplin</string>
+    <string name="question8_choice2">Fred Astaire</string>
+    <string name="question8_choice3">Justin Bieber</string>
+    <string name="question8_choice4">Michael Jackson</string>
+
+    <string name="question9_choice1">Cypress</string>
+    <string name="question9_choice2">Tulip</string>
+    <string name="question9_choice3">Narcissist</string>
+    <string name="question9_choice4">Rose</string>
+
+    <string name="question10_choice1">Cimba</string>
+    <string name="question10_choice2">Kaa</string>
+    <string name="question10_choice3">Baly</string>
+    <string name="question10_choice4">Po</string>
+
+    <string name="question11_choice1">Mercury</string>
+    <string name="question11_choice2">Mars</string>
+    <string name="question11_choice3">Jupiter</string>
+    <string name="question11_choice4">Neptune</string>
+
+    <string name="question12_choice1">six years</string>
+    <string name="question12_choice2">four years</string>
+    <string name="question12_choice3">five years</string>
+    <string name="question12_choice4">two years</string>
+
+    <string name="question13_choice1">Malta</string>
+    <string name="question13_choice2">Maldives</string>
+    <string name="question13_choice3">Russia</string>
+    <string name="question13_choice4">Vatican </string>
+
+    <string name="question14_choice1">Seal</string>
+    <string name="question14_choice2">dolphin</string>
+    <string name="question14_choice3">shark</string>
+    <string name="question14_choice4">Whale</string>
+
+    <string name="question15_choice1">Oysters</string>
+    <string name="question15_choice2">Crabs</string>
+    <string name="question15_choice3">Crayfish</string>
+    <string name="question15_choice4">Mussels</string>
+
+    <!-- Riddles -->
+    <string name="riddle1">It does not burn in fire, nor does it sink in water.</string>
+    <string name="riddle2">Soft paws, and there are scratches in the paws.</string>
+    <string name="riddle3">The palace is floating on the waves, carrying an important cargo in the hold.</string>
+    <string name="riddle4">There is a ladder in the field, the house runs up the stairs.</string>
+    <string name="riddle5">Two ends, two rings, in the middle of the carnations.</string>
+    <string name="riddle6">The red girl is sitting in a dungeon, and the scythe is on the street.</string>
+    <string name="riddle7">A red-hot arrow knocked down an oak tree near the village.</string>
+    <string name="riddle8">A multicolored yoke hung over the river.</string>
+    <string name="riddle9">In winter — a star, In Spring — water.</string>
+    <string name="riddle10">There\'s water all around, but there\'s trouble with drinking.</string>
+    <string name="riddle11">Planted a seed - raised the sun.</string>
+    <string name="riddle12">The poor thing will hide in the board — his cap is barely visible.</string>
+    <string name="riddle13">Fluffy cotton floats somewhere. The lower the cotton wool, the closer the rain.</string>
+    <string name="riddle14">A log is floating on the river. Oh, and it\'s feisty!</string>
+    <string name="riddle15">The scarlet, sugar, green, velvet caftan itself.</string>
+
+    <!-- Riddles Answers -->
+    <string name="riddle1_answer">ice</string>
+    <string name="riddle2_answer">cat</string>
+    <string name="riddle3_answer">ship</string>
+    <string name="riddle4_answer">train</string>
+    <string name="riddle5_answer">scissors</string>
+    <string name="riddle6_answer">carrot</string>
+    <string name="riddle7_answer">lightning</string>
+    <string name="riddle8_answer">rainbow</string>
+    <string name="riddle9_answer">snowflake</string>
+    <string name="riddle10_answer">sea</string>
+    <string name="riddle11_answer">sunflower</string>
+    <string name="riddle12_answer">pin</string>
+    <string name="riddle13_answer">cloud</string>
+    <string name="riddle14_answer">crocodile</string>
+    <string name="riddle15_answer">watermelon</string>
+
+    <!-- Mathematics -->
+    <string name="mathematics1">2 + 2*2</string>
+    <string name="mathematics2">9*5 + 3 – 16 + 4</string>
+    <string name="mathematics3">7 + 3*6 + 55 – 19</string>
+    <string name="mathematics4">29 – 15 + 3*30 – 8</string>
+    <string name="mathematics5">91 – 7*6 + 14 – 2</string>
+    <string name="mathematics6">15 + 18 + 57 – 31 + 3</string>
+    <string name="mathematics7">83 – 12*2 + 14</string>
+    <string name="mathematics8">18*3 + 7 – 2</string>
+    <string name="mathematics9">16 + 16 + 16 – 8*2</string>
+    <string name="mathematics10">92 – 1 – 2 – 3 – 4</string>
+
+    <!-- Mathematics Answers -->
+    <string name="mathematics1_answer">6</string>
+    <string name="mathematics2_answer">36</string>
+    <string name="mathematics3_answer">61</string>
+    <string name="mathematics4_answer">96</string>
+    <string name="mathematics5_answer">61</string>
+    <string name="mathematics6_answer">62</string>
+    <string name="mathematics7_answer">73</string>
+    <string name="mathematics8_answer">69</string>
+    <string name="mathematics9_answer">32</string>
+    <string name="mathematics10_answer">82</string>
+    <string name="notification_channel_name2">Ch3</string>
+    <string name="notification_channel_desc2">Ch4</string>
+    <string name="SmartAlarmClock">Smart AlarmClock</string>
+    <string name="wake_up_brah">wake up, brah!</string>
+    <string name="Reminder">Reminder</string>
+    <string name="AlarmClock">AlarmClock</string>
+    <string name="todo">TODO</string>
+
+</resources>

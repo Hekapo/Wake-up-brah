@@ -78,12 +78,12 @@ class SmartFragment : Fragment(R.layout.fragment_smart) {
                 ).show()
                 customSmart.setAlarm(requireContext(), smartTimeRepository.getTime(requireContext()))
 
-                findNavController().navigate(R.id.action_smartFragment_to_timePatternsFragmment2)
+                findNavController().navigate(R.id.action_smartFragment_to_startedFragment)
             }
         }
         with(binding) {
             back.setOnClickListener {
-                findNavController().navigate(R.id.action_smartFragment_to_timePatternsFragmment2)
+                findNavController().navigate(R.id.action_smartFragment_to_startedFragment)
             }
 
         }

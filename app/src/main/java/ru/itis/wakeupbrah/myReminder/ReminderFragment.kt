@@ -85,12 +85,12 @@ class ReminderFragment : Fragment(R.layout.fragment_reminder) {
                 ).show()
                 customReminder.setAlarm(requireContext(), reminderTimeRepository.getTime(requireContext()))
 
-                findNavController().navigate(R.id.action_reminderFragment_to_timePatternsFragmment2)
+                findNavController().navigate(R.id.action_reminderFragment_to_startedFragment)
             }
         }
         with(binding) {
             back.setOnClickListener {
-                findNavController().navigate(R.id.action_reminderFragment_to_timePatternsFragmment2)
+                findNavController().navigate(R.id.action_reminderFragment_to_startedFragment)
             }
 
         }

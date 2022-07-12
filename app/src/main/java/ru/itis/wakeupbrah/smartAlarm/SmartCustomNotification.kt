@@ -13,7 +13,6 @@ import ru.itis.wakeupbrah.features.open_alarm.AlarmActivity
 import ru.itis.wakeupbrah.features.set_alarm.MainFragment
 import ru.itis.wakeupbrah.myReminder.ReminderRepository
 import ru.itis.wakeupbrah.smartAlarm.SmartActivity
-import ru.itis.wakeupbrah.time_patterns.TimePatternsFragment
 import ru.itis.wakeupbrah.utils.Constants
 
 

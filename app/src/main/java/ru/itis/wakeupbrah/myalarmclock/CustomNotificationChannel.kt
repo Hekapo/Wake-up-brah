@@ -20,7 +20,6 @@ class CustomNotificationChannel {
             .build()
     }
 
-
     @RequiresApi(Build.VERSION_CODES.O)
     fun createChannel(context: Context?) {
         if (context != null) {

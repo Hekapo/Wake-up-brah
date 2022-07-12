@@ -78,12 +78,12 @@ class MainFragment : Fragment(R.layout.fragment_main) {
                 ).show()
                 customAlarm.setAlarm(requireContext(), timeRepository.getTime(requireContext()))
 
-                findNavController().navigate(R.id.action_mainFragment_to_timePatternsFragmment)
+                findNavController().navigate(R.id.action_mainFragment_to_startedFragment)
             }
         }
         with(binding) {
             back.setOnClickListener {
-                findNavController().navigate(R.id.action_mainFragment_to_timePatternsFragmment)
+                findNavController().navigate(R.id.action_mainFragment_to_startedFragment)
             }
         }
         with(binding) {

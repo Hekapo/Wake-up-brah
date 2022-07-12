@@ -10,10 +10,10 @@ import android.os.Vibrator
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import ru.itis.wakeupbrah.R
+import ru.itis.wakeupbrah.StartedFragment
 import ru.itis.wakeupbrah.features.open_alarm.AlarmActivity
 import ru.itis.wakeupbrah.myReminder.ReminderActivity
 import ru.itis.wakeupbrah.myReminder.ReminderRepository
-import ru.itis.wakeupbrah.time_patterns.TimePatternsFragment
 import ru.itis.wakeupbrah.utils.Constants
 
 
@@ -22,19 +22,16 @@ class ReminderCustomNotification {
     @RequiresApi(Build.VERSION_CODES.M)
     fun createNotification(context: Context) {
         val rem = ReminderRepository
-        val intent = Intent(context, TimePatternsFragment::class.java).let {
+        val intent = Intent(context, StartedFragment::class.java).let {
             PendingIntent.getActivities(
                 context,
                 123,
                 arrayOf(it),
                 PendingIntent.FLAG_ONE_SHOT or PendingIntent.FLAG_IMMUTABLE
-
             )
-
         }
-
         val builder = NotificationCompat.Builder(context, Constants.CHANNEL_ID)
-            .setSmallIcon(R.drawable.leather)
+            .setSmallIcon(R.drawable.img)
             .setContentTitle("Напоминание")
             .setShowWhen(false)
             .setAutoCancel(true)

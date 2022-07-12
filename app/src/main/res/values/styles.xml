@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
     <style name="text_enter_answer">
         <item name="android:textSize">
             18sp
-        </item>
-        <item name="android:textColor">
-            #CFCFCF
         </item>
     </style>
 
@@ -43,6 +41,31 @@
         <item name="android:textColor">
             #FFFFFF
         </item>
+    </style>
+    <style name="AppThemeDark" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#2A2F35</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:background">#1F252B</item>
+        <item name="android:textColorHint">@color/white</item>
+
+    </style>
+
+    <style name="Defoult" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#862DD7</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:background">#9638E6</item>
+        <item name="android:textColorHint">@color/white</item>
     </style>
 
 </resources>
